@@ -6,9 +6,9 @@ pipeline{
         sh "bash file.sh $value"
       }
     }
-    stage("Stage 2"){
+    stage("Status"){
       steps{
-        echo "Hello!"
+        sh "bash stats.sh $value"
       }
     }
   }
