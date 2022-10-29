@@ -1,14 +1,14 @@
 pipeline{
   agent any
-  stage{
-    stages("Check Status"){
+  stages{
+    stage("Check Status"){
       steps{
         sh "bash file.sh $value"
       }
     }
-    stages("Stage2"){
+    stage("Stage 2"){
       steps{
-        echo 'Hello!'
+        echo "Hello!"
       }
     }
   }
