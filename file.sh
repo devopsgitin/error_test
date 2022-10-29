@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ $value -gt 10 ]
+if [ $1 -gt 10 ]
 then
   exit 1
 else
