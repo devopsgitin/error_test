@@ -3,7 +3,10 @@ pipeline{
   stages{
     stage("Check Status"){
       steps{
-        sh "bash file.sh $value"
+        sh '''
+          set +x
+          bash file.sh $value
+        '''
       }
     }
     stage("Status"){
