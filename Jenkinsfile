@@ -8,7 +8,10 @@ pipeline{
     }
     stage("Status"){
       steps{
-        sh "bash stats.sh $value"
+        sh '''
+          set +x
+          bash stats.sh $value
+        '''
       }
     }
   }
